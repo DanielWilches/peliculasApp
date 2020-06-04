@@ -1,0 +1,113 @@
+/* tamaño normal: 1920x 1080 */
+.contenedorNav {
+    width: 100%;
+    height: 70%;
+    background-color: #032541;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedorNav--navegacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.contenedorNav--navegacion img {
+    width: 100px;
+    height: 100px;
+}
+
+.contenedorNav--navegacion__titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* color: linear-gradient(to right, #84cca7, #61c8b6, #37c3c7, #00bcd8, #00b3e5); */
+}
+
+.contenedorNav--navegacion__titulo h1 {
+    color: white;
+    margin: 0px;
+    padding-right: 5px;
+}
+
+.contenedorNav--navegacion__enlace {
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.5s;
+
+}
+.contenedorNav--navegacion__enlace:hover {
+    animation-duration: 7s;
+    border-bottom: white solid 2px;
+    border-radius: 2px;
+    background-color: rgba(235, 235, 235 , 0.2);
+}
+.Actived{
+    border-bottom: white solid 2px;
+    border-radius: 2px;
+}
+
+.contenedorNav--navegacion__enlace a {
+    text-decoration: none;
+    color: white;
+    /* text-align: center; */
+}
+
+.contenedorNav--searchBar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+.contenedorNav--searchBar__form {
+    height: 50%;
+    width:100% ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contenedorNav--searchBar__form  input {
+    padding: 0px 6px 0px 10px;
+    margin-top: 9%;
+    height: 70%;
+    border: transparent;
+    width: 80%;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.contenedorNav--searchBar__form  button {
+    color: white;
+    cursor: pointer;
+    height: 70%;
+    width: 20%;
+    border: none;
+    padding: 0px 6px 0px 10px;
+    margin-top:9%;
+    background-image: linear-gradient(to right, #84cca7, #61c8b6, #37c3c7, #00bcd8, #00b3e5);
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px;
+}
+.inputError{ 
+    border-bottom:red solid 2px;
+}
+.textError {
+    margin: 4% 0 0 0;
+    padding: 0px;
+    width: 60%;
+    color: red;
+    text-align: right;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+/* fin del tamaño normal */
