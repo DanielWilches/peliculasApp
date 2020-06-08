@@ -24,7 +24,9 @@ export class NavbarComponent implements OnInit {
       return;
     }else {
       console.log(forma.value.search);
-      this.PeliculasS.buscarPelicula(forma.value.search);
+      this.PeliculasS.buscarPelicula(forma.value.search).subscribe((resul: any) => {
+        console.log(resul);
+      });
     }
   }
 

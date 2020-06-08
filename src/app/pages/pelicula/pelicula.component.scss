@@ -1,0 +1,219 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    // background-color: grey;
+}
+
+.container--cja {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 95%;
+    // background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+}
+
+.container--cja__img {
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -5px
+}
+
+.container--cja__btn {
+    width: 100%;
+    height: 5%;
+    margin: 0px;
+    padding: 5% 0;
+    font-size: 20px;
+    display: block;
+    background-color: #032541;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.container--info {
+    margin-top: 7%;
+    width: 100%;
+    height: 85%;
+    // border: 2px solid black;
+}
+
+.container--info__titulo {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.container--info__titulo h3,
+time {
+    margin: 10px 5px;
+}
+
+.container--info__titulo time {
+    font-weight: 200;
+    color: #B9BBB9;
+}
+
+.container--info__extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-left: 40px;
+}
+
+.info--extra__date {
+    font-weight: 600;
+}
+
+.info--extra__idioma {
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.info--extra__idioma::after {
+    content: '*';
+}
+
+.info--extra__generos {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2px;
+    width: auto;
+}
+
+.info--extra__generos::after {
+    content: '*';
+}
+
+.info--extra__generos li {
+    margin-left: 5px;
+    margin-right: 5px;
+    list-style: none;
+}
+
+.container--info__duracion {
+    padding: 0 2px;
+}
+
+.container--info__cite {
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.container--info__status{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+.container--info__rtitulo{
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 700;
+ }
+.container--info__resumen {
+    font-size: 16px;
+    font-weight: 400;
+}
+.container--info__costos {
+    display: flex;
+    justify-items: center;
+    margin-left: 40px;
+}
+.container--info__costos p {
+    margin-right: 10%;
+}
+.container--moreinfo{
+    background: rgba(235, 235, 235, 0.3);
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end:3 ;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 95%;
+    height: 90%;
+    margin: 2.5%  ;
+    justify-self: center;
+
+}
+.container--moreinfo h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+.container--moreinfo h4 {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 5%;
+}
+.container--moreinfo__production_companies {
+    width: 90%;
+    height: 70%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.moreinfo--production_companies__card {
+    // background-color: #EBEBEB;
+    width: 30%;
+    height: 90%;
+    border-radius: 10px;
+    margin: 15px;
+}
+.moreinfo--production_companies__card img {
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 10px  10px;
+
+} 
+.container--moreinfo__production_companies::-webkit-scrollbar {
+    height: 15px;
+    width: 90%;
+    margin: 0px  2.5% ;
+}
+
+.container--moreinfo__production_companies::-webkit-scrollbar-thumb {
+    background: rgba($color: #032541, $alpha: .5);
+    border-radius: 4px;
+}
+
+.container--moreinfo__production_companies::-webkit-scrollbar-thumb:hover {
+    transition: 1s;
+    background: rgba($color: #032541, $alpha: 1);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container--moreinfo__production_companies::-webkit-scrollbar-track {
+    // background: #e1e1e1;
+    background: rgba($color: #032541, $alpha: .1);
+    border-radius: 4px;
+}
+
+.container--moreinfo__production_companies::-webkit-scrollbar-track:hover,
+.container--moreinfo__production_companies::-webkit-scrollbar-track:active {
+    transition: 1s;
+    background: rgba($color: #032541, $alpha: .3);
+}
+.container--moreinfo__production_countries{
+
+}

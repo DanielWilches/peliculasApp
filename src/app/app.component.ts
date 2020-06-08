@@ -8,8 +8,5 @@ import { PeliculasService } from './services/peliculas.service';
 })
 export class AppComponent {
   title = 'peliculasApp';
-  constructor( private peliculaS: PeliculasService ){
-    this.peliculaS.getPopulares();
-    // .subscribe((resul) => console.log(resul));
-  }
+
 }

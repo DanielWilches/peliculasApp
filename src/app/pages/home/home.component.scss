@@ -1,0 +1,86 @@
+// contenedor 
+$var: peli[title];
+.container-home{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40% repeat(3,40%);
+    grid-template-columns: 100%;
+    row-gap: 4%; // esto genera un margen entre los elementos del contenedor, este caso el margen sera 4 % el ancho total
+    grid-template-areas: 
+    'titulo'
+    'cartelera'
+    'populares'  
+    'popularesInfatiles';
+}
+// header
+.container-home__header {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-image: url('../../../assets/img/header.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    // border-radius-bo: 5px;
+}
+// header titulo
+.container-home__header h2 { 
+    margin: 0 5%;
+    padding: 0px;
+    color: white;
+    font-size: 45px;
+}
+// header descripción
+.container-home__header p {
+    margin: 2% 5%;
+    color: white;
+    font-size: 26px;
+}
+// caja cartelera
+.container-home__cartelera {
+    grid-area: cartelera;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+.container-home__populares {
+    grid-area: populares;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* background-color: red; */
+    
+}
+.container-home__popularesInfatiles {
+    grid-area: popularesInfatiles;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* background-color: red; */
+}
+
+//  reutilizabes
+.subtitle {
+    color:black;
+    margin: 0;
+    font-size: 25px;
+    height: 25px;
+    padding: 1% 2%;
+    width: 50%;
+    font-weight: 600;
+}
+// 

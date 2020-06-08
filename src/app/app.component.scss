@@ -1,0 +1,24 @@
+.contenedor {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 60% 20% ;
+    grid-template-rows: 10% 120% ;  
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    ;  
+    // "footer footer footer"
+
+}
+.contenedor--header {
+    grid-area:header;
+}
+.contenedor--main {
+    grid-area: main;
+}
+// .contenedor--footer {
+//     grid-area: footer;
+// }

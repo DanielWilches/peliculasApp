@@ -1,0 +1,16 @@
+<div *ngIf="Pelicula" class="container">
+  <div
+    (click)="goPelicula(peli.id)"
+    class="container--card"
+    *ngFor="let peli of Pelicula | noImage; let i = index"
+  >
+    <ng-container *ngIf="peli.poster_path; else elseTemplate">
+      <img class="container--card__img" [src]="peli.poster_path" alt="" />
+    </ng-container>
+    <ng-template #elseTemplate>
+      <img class="container--card__img" [src]="peli.backdrop_path" alt="" />
+    </ng-template>
+    <h4 class="container--card__titulo">{{ peli.title }}</h4>
+    <p class="container--card__text">{{ peli.release_date }}</p>
+  </div>
+</div>

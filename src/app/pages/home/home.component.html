@@ -1,1 +1,22 @@
-<p>home works!</p>
+<section class="container-home">
+  <header class="container-home__header">
+    <h2>Bienvenidos.</h2>
+    <p>Millones de peliculas. Explora ahora.</p>
+  </header>
+  <div class="container-home__cartelera" name="cartelera">
+    <h3 class="subtitle">Peliculas en cartelera</h3>
+    <app-card [Pelicula]="Pcartelera" ></app-card>
+  </div>
+
+  <div class="container-home__populares" name="populares">
+    <h3 class="subtitle">Peliculas mas populares</h3>
+    <app-card [Pelicula]="Ppopulares" ></app-card>
+    <!-- <div class="containerCard" ></div> -->
+
+  </div>
+  <div class="container-home__popularesInfatiles" name="popularesInfatiles">
+    <h3 class="subtitle">Las peliuclas infantiles mas populares</h3>
+    <app-card [Pelicula]="PpopuInfatiles" ></app-card>
+
+  </div>
+</section>

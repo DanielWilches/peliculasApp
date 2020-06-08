@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    scrollbar-color: rgba($color: #032541, $alpha: .5) rgba($color: #032541, $alpha: .1);
+}
+
+.container:hover {
+    transition: 1s;
+    scrollbar-color: rgba($color: #032541, $alpha: .7) rgba($color: #032541, $alpha: .3);
+    ;
+}
+
+.container::-webkit-scrollbar {
+    height: 15px;
+    width: 100%;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba($color: #032541, $alpha: .5);
+    border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    transition: 1s;
+    background: rgba($color: #032541, $alpha: 1);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container::-webkit-scrollbar-track {
+    // background: #e1e1e1;
+    background: rgba($color: #032541, $alpha: .1);
+    border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-track:hover,
+.container::-webkit-scrollbar-track:active {
+    transition: 1s;
+    background: rgba($color: #032541, $alpha: .3);
+}
+
+.container--card {
+    height: 95%;
+    width: 25%;
+    border-radius: 10px;
+    margin: 5px 20px;
+    box-shadow: 5px 5px 5px 3px rgba($color: #000000, $alpha: .1);
+}
+.container--card:hover {
+    transition: .2s;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px 3px rgba($color: #000000, $alpha: .2);
+
+}
+
+.container--card__img {
+    width: 200px;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.container--card__titulo {
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+    text-align: left;
+    font-weight: 600;
+    color: black;
+}
+
+.container--card__text {
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+    font-weight: 300;
+    text-align: left;
+    color: black;
+}
