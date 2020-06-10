@@ -1,1 +1,26 @@
-<p>buscador works!</p>
+<section class="container" >
+    <div class="container--buscardor" >
+        <form  #formsearchs="ngForm"
+                [formGroup]="searchform" 
+                (ngSubmit)="formsearch(formsearchs.form)"  
+                class="container--buscador__formulario" >
+            <input formControlName="search"  
+                class="buscador--formulario__input"
+                type="text"
+                (keyup)="formsearch(formsearchs.form)" 
+                placeholder="ingresa tu busqueda">
+            <!-- <button class="buscador--formulario__btn"
+                    type="submit" > buscardor
+                <fa-icon [icon]="iconS.faSearch" > </fa-icon>
+            </button> -->
+        </form>
+    </div>
+    <div class="container--buscados" >
+        <ng-container *ngIf="true; else elseTemplate">
+            <app-search-cards [arraybusqueda]="arrayBuquedas" ></app-search-cards>
+        </ng-container>
+        <ng-template #elseTemplate>
+            
+        </ng-template>
+    </div>
+</section>

@@ -28,7 +28,14 @@
         <p>Ingresos: {{pelicula.revenue |currency }} </p>
       </div>      
       <div class="container--info__popular" >
-        <p>calficacion: {{pelicula.vote_average |number }}  </p>
+        <p>calficacion:</p>
+        <div class="container--info__porcentajes" >
+          <p >0%</p>
+          <p >100%</p>
+        </div>
+        <div class="container--info__PopularBarra" >
+          <div  [ngStyle]="{'width.%': pelicula.vote_average*10 }"></div>
+        </div>
       </div>
       <div class="container--info__costos" >
         <p>Total votos: {{pelicula.vote_count |number }}</p>

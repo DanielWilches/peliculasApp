@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,9 +24,11 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ErrorComponent } from './components/shared/error/error.component';
+import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 // pipes
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { NoLogoPipe } from './pipes/no-logo.pipe';
+
 
 @NgModule({
   declarations: [
@@ -35,21 +39,22 @@ import { NoLogoPipe } from './pipes/no-logo.pipe';
     FooterComponent,
     LoadingComponent,
     ErrorComponent,
+    PeliculaComponent,
     NoImagePipe,
     CardComponent,
-    PeliculaComponent,
-    NoLogoPipe
-
+    NoLogoPipe,
+    SearchCardsComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    FontAwesomeModule,
-    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     ScrollingModule,
+    FontAwesomeModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

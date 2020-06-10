@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  height: 200px;
+  margin: 2.5% 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container__img {
+  width: 10%;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container--info {
+  margin-top: 10px;
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container--info p {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container--info time {
+  margin: 0;
+  font-size: 20px;
+  color: grey;
+}
+
+.container--info blockquote {
+  margin: 10px 10px;
+}
+/*# sourceMappingURL=search-cards.component.css.map */

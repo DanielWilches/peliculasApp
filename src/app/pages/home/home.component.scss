@@ -4,7 +4,7 @@ $var: peli[title];
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 40% repeat(3,40%);
+    grid-template-rows: 40% repeat(3,50%);
     grid-template-columns: 100%;
     row-gap: 4%; // esto genera un margen entre los elementos del contenedor, este caso el margen sera 4 % el ancho total
     grid-template-areas: 

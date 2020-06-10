@@ -80,3 +80,26 @@
     text-align: left;
     color: black;
 }
+.container--card__porcentajes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 2.5%;
+    // height: 16px;
+}
+.container--card__porcentajes p {
+    margin: 0%;
+    padding: 0%;
+}
+.container--card__PopularBarra {
+    height: 16px;
+    width: 90%;
+    margin: 0px 2.5%;
+    border-radius: 10px;
+    background: rgba(235, 235, 235, 0.4);
+}
+.container--card__PopularBarra div{
+    height: 100%;
+    border-radius: 10px;
+    background:#4BEB12;
+}

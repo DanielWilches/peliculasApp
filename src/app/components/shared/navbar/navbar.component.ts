@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IconsService } from '../../../services/icons.service';
-import { PeliculasService } from '../../../services/peliculas.service';
 
 
 @Component({
@@ -11,30 +11,33 @@ import { PeliculasService } from '../../../services/peliculas.service';
 })
 export class NavbarComponent implements OnInit {
   formSearch: FormGroup;
-  constructor(  public iconsS: IconsService, private PeliculasS: PeliculasService ) {
+  constructor(public iconsS: IconsService, private router: Router) {
     this.validacion();
   }
 
   ngOnInit(): void {
   }
-  search( forma: any){
-    if ( forma.status === 'INVALID' ){
+  // getsearch(text: string) {
+  //   this.PeliculasS.buscarPelicula(text).subscribe((resul: any) => {
+  //     console.log(resul);
+  //   });
+  // }
+
+  search(forma: FormGroup) {
+    if (forma.status === 'INVALID') {
       console.log('estado invalido');
-      console.log(forma);
       return;
-    }else {
-      console.log(forma.value.search);
-      this.PeliculasS.buscarPelicula(forma.value.search).subscribe((resul: any) => {
-        console.log(resul);
-      });
+    } else {
+      this.router.navigate(['buscado/', forma.value[`search`]]);
+      forma.controls.search.reset('');
+      forma.controls[`search`].setErrors(null);
     }
   }
 
 
   validacion() {
     this.formSearch = new FormGroup({
-      search: new FormControl ('', [ Validators.required, Validators.maxLength(30)])
+      search: new FormControl('', [Validators.required, Validators.maxLength(30)])
     });
   }
-
 }

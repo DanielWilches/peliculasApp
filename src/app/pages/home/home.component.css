@@ -3,8 +3,8 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 40% (40%)[3];
-      grid-template-rows: 40% repeat(3, 40%);
+  -ms-grid-rows: 40% (50%)[3];
+      grid-template-rows: 40% repeat(3, 50%);
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   row-gap: 4%;

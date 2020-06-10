@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, RouteReuseStrategy, Router, ActivationStart, ActivationEnd } from '@angular/router';
+import { IconsService } from '../../services/icons.service';
+import { PeliculasService } from '../../services/peliculas.service';
+import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-buscador',
@@ -6,10 +12,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buscador.component.css']
 })
 export class BuscadorComponent implements OnInit {
-
-  constructor() { }
+  searchform: FormGroup;
+  arrayBuquedas: any[];
+  textSearch: string;
+  search: any;
+  constructor(public iconS: IconsService, private peliculaS: PeliculasService,
+              private acRoute: ActivatedRoute,  private router: Router) {}
 
   ngOnInit(): void {
+    const TEXT = this.acRoute.snapshot.params.keyText;
+    if (TEXT) {
+      this.validaciones(TEXT);
+      this.getBusqueda(TEXT);
+    }else{
+      this.validaciones('');
+    }
   }
-
+  getBusqueda(busqueda: string) {
+    this.peliculaS.buscarPelicula(busqueda).subscribe((resul: any) => {
+      return this.arrayBuquedas = resul;
+    }, (err: any) => {
+      console.log(err);
+    });
+  }
+  formsearch(formulario: FormGroup) {
+    this.getBusqueda(formulario.value[`search`]);
+  }
+  validaciones(text: string) {
+    console.log(text);
+    if ( text ){
+      this.searchform = new FormGroup({
+        search: new FormControl(text, [Validators.required, Validators.maxLength(20)])
+      });
+    }else{
+      this.searchform = new FormGroup({
+        search: new FormControl('', [Validators.required, Validators.maxLength(20)])
+      });
+    }
+  }
 }

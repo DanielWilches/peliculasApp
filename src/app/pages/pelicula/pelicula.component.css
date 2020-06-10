@@ -166,6 +166,49 @@ time {
   margin-right: 10%;
 }
 
+.container--info__popular {
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container--info__popular p {
+  margin: 2px;
+  font-weight: 500;
+}
+
+.container--info__porcentajes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container--info__PopularBarra {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(235, 235, 235, 0.4);
+}
+
+.container--info__PopularBarra div {
+  height: 100%;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#abe98f), color-stop(#9ee380), color-stop(#92de70), color-stop(#85d860), to(#77d24f));
+  background-image: linear-gradient(to right, #abe98f, #9ee380, #92de70, #85d860, #77d24f);
+}
+
 .container--moreinfo {
   background: rgba(235, 235, 235, 0.3);
   border-radius: 10px;
@@ -221,13 +264,13 @@ time {
   padding: 5px;
   width: 200px;
   height: 200px;
-  border-radius: 10px 10px 10px  10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .container--moreinfo__production_companies::-webkit-scrollbar {
   height: 15px;
   width: 90%;
-  margin: 0px  2.5%;
+  margin: 0px 2.5%;
 }
 
 .container--moreinfo__production_companies::-webkit-scrollbar-thumb {

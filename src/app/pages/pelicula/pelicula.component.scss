@@ -117,52 +117,86 @@ time {
     margin-left: 40px;
 }
 
-.container--info__status{
+.container--info__status {
     font-size: 16px;
     font-weight: 400;
     margin-left: 40px;
 }
-.container--info__rtitulo{
+
+.container--info__rtitulo {
     margin-left: 40px;
     font-size: 20px;
     font-weight: 700;
- }
+}
+
 .container--info__resumen {
     font-size: 16px;
     font-weight: 400;
 }
+
 .container--info__costos {
     display: flex;
     justify-items: center;
     margin-left: 40px;
 }
+
 .container--info__costos p {
     margin-right: 10%;
 }
-.container--moreinfo{
+
+.container--info__popular {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.container--info__popular p {
+    margin: 2px;
+    font-weight: 500;
+}
+.container--info__porcentajes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container--info__PopularBarra {
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(235, 235, 235, 0.4);
+}
+.container--info__PopularBarra div{
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #abe98f, #9ee380, #92de70, #85d860, #77d24f);
+}
+
+.container--moreinfo {
     background: rgba(235, 235, 235, 0.3);
     border-radius: 10px;
     grid-column-start: 1;
-    grid-column-end:3 ;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
     width: 95%;
     height: 90%;
-    margin: 2.5%  ;
+    margin: 2.5%;
     justify-self: center;
-
 }
-.container--moreinfo h3{
+
+.container--moreinfo h3 {
     font-size: 25px;
     font-weight: 400;
     text-align: center;
 }
+
 .container--moreinfo h4 {
     font-size: 16px;
     font-weight: 300;
     text-align: left;
     margin-left: 5%;
 }
+
 .container--moreinfo__production_companies {
     width: 90%;
     height: 70%;
@@ -172,6 +206,7 @@ time {
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
 .moreinfo--production_companies__card {
     // background-color: #EBEBEB;
     width: 30%;
@@ -179,17 +214,18 @@ time {
     border-radius: 10px;
     margin: 15px;
 }
+
 .moreinfo--production_companies__card img {
     padding: 5px;
     width: 200px;
     height: 200px;
-    border-radius: 10px 10px 10px  10px;
+    border-radius: 10px 10px 10px 10px;
+}
 
-} 
 .container--moreinfo__production_companies::-webkit-scrollbar {
     height: 15px;
     width: 90%;
-    margin: 0px  2.5% ;
+    margin: 0px 2.5%;
 }
 
 .container--moreinfo__production_companies::-webkit-scrollbar-thumb {
@@ -214,6 +250,5 @@ time {
     transition: 1s;
     background: rgba($color: #032541, $alpha: .3);
 }
-.container--moreinfo__production_countries{
 
-}
+// .container--moreinfo__production_countries {}

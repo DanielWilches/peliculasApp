@@ -8,6 +8,7 @@ import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'buscador', component: BuscadorComponent },
+    { path: 'buscado/:keyText', component: BuscadorComponent },
     { path: 'pelicula/:id', component: PeliculaComponent },
     { path: '',   redirectTo: 'home', pathMatch: 'full' }, // redirect to `first-component`
     { path: '**', component: HomeComponent },

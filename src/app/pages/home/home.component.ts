@@ -34,12 +34,12 @@ export class HomeComponent implements OnInit {
     this.PeliculasS.getPopulares().subscribe((resul) => {
       this.Ppopulares = resul;
       return this.Ppopulares;
-    });
+    }, err => console.log(err));
   }
   getPopularesInfantiles() {
     this.PeliculasS.getPopularesInfantiles().subscribe((resul) => {
       this.PpopuInfatiles = resul;
       return this.PpopuInfatiles;
-    });
+    }, err => console.log(err));
   }
 }

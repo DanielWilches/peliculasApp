@@ -1,0 +1,18 @@
+<ng-container *ngIf="arraybusqueda"  >
+    <section class="container" 
+            *ngFor="let busqueda of arraybusqueda | noImage; let i = index"
+            (click)="goToPelicula(busqueda.id)"  > 
+        <ng-container *ngIf="busqueda.poster_path; else elseTemplate">
+            <img class="container__img" [src]="busqueda.poster_path" alt="poster_path" />
+          </ng-container>
+          <ng-template #elseTemplate>
+            <img class="container__img" [src]="busqueda.backdrop_path" alt="backdrop_path" />
+          </ng-template>
+        <div class="container--info" >
+            <p>{{ busqueda.title }}</p>
+            <time>{{ busqueda.release_date  | date: 'dd-MMMM-yyyy' }}</time>
+            <blockquote>{{ busqueda.overview }}</blockquote>
+        </div>   
+    </section>
+</ng-container>
+
