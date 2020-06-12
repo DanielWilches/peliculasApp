@@ -12,12 +12,12 @@
     </ng-template>
     <h4 class="container--card__titulo">{{ peli.title }}</h4>
     <p class="container--card__text">{{ peli.release_date }}</p>
-    <div class="container--card__porcentajes" >
-      <p >0%</p>
-      <p >100%</p>
+    <div class="container--card__porcentajes">
+      <p>0%</p>
+      <p>100%</p>
     </div>
-    <div class="container--card__PopularBarra" >
-      <div  [ngStyle]="{'width.%': peli.vote_average*10 }"></div>
+    <div class="container--card__PopularBarra">
+      <div [ngStyle]="{ 'width.%': peli.vote_average * 10 }"></div>
     </div>
   </div>
 </div>

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, NavigationEnd, NavigationStart } from '@angular
 // import { Peliculas } from '../../Interface/peliculas.interface';
 import { PeliculasService } from '../../services/peliculas.service';
 // import { url } from 'inspector';
+import { logging } from 'protractor';
 
 
 @Component({
@@ -14,6 +15,9 @@ import { PeliculasService } from '../../services/peliculas.service';
 
 export class PeliculaComponent implements OnInit {
   pelicula: any;
+  cargadoComponente = {
+    loading: true
+  };
   constructor(private acRouter: ActivatedRoute, private router: Router, private peliculasS: PeliculasService) {
   }
 
@@ -25,7 +29,9 @@ export class PeliculaComponent implements OnInit {
 
   getPelicula(id: number) {
     this.peliculasS.buscarPeliId(id).subscribe((res: object) => {
-      // console.log(res);
+      setTimeout(() => {
+        this.cargadoComponente.loading = false;
+      }, 3000);
       this.pelicula = this.validoImg(res);
       return this.pelicula;
     });

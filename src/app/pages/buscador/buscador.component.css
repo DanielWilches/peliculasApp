@@ -26,6 +26,7 @@
   height: 70%;
   width: 100%;
   background: rgba(235, 235, 235, 0.5);
+  border-radius: 10px;
 }
 
 .buscador--formulario__input {
@@ -33,28 +34,18 @@
   font-size: 20px;
   font-style: italic;
   font-weight: 300;
-  width: 60%;
-  height: 45%;
+  width: 80%;
+  height: 50%;
   padding-left: 10px;
-  margin-top: 1%;
+  margin-top: 1.2%;
   border: none;
-}
-
-.buscador--formulario__btn {
-  background: -webkit-gradient(linear, left top, right top, from(#84cca7), color-stop(#61c8b6), color-stop(#37c3c7), color-stop(#00bcd8), to(#00b3e5));
-  background: linear-gradient(to right, #84cca7, #61c8b6, #37c3c7, #00bcd8, #00b3e5);
-  color: white;
-  height: 52%;
-  width: 15%;
-  margin-top: 1%;
-  border: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .container--buscados {
-  width: 95%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   padding: 0px 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IconsService } from '../../../services/icons.service';
 
 @Component({
   selector: 'app-error',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorComponent implements OnInit {
 
-  constructor() { }
+  constructor( public iconS: IconsService ) { }
 
   ngOnInit(): void {
   }

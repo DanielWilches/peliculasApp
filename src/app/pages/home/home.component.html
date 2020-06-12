@@ -3,20 +3,26 @@
     <h2>Bienvenidos.</h2>
     <p>Millones de peliculas. Explora ahora.</p>
   </header>
-  <div class="container-home__cartelera" name="cartelera">
+  <ng-container *ngIf="!cargado.Cartelera && !cargado.Populares && !cargado.PopularesInfantiles ; else elseTemplate">
+  <!-- <ng-container *ngIf="false ; else elseTemplate"> -->
+    <div class="container-home__cartelera animate__animated animate__fadeIn" name="cartelera">
     <h3 class="subtitle">Peliculas en cartelera</h3>
-    <app-card [Pelicula]="Pcartelera" ></app-card>
+    <app-card [Pelicula]="Pcartelera"></app-card>
   </div>
 
   <div class="container-home__populares" name="populares">
     <h3 class="subtitle">Peliculas mas populares</h3>
-    <app-card [Pelicula]="Ppopulares" ></app-card>
-    <!-- <div class="containerCard" ></div> -->
-
+    <app-card [Pelicula]="Ppopulares"></app-card>
   </div>
   <div class="container-home__popularesInfatiles" name="popularesInfatiles">
     <h3 class="subtitle">Las peliuclas infantiles mas populares</h3>
-    <app-card [Pelicula]="PpopuInfatiles" ></app-card>
-
+    <app-card [Pelicula]="PpopuInfatiles"></app-card>
   </div>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <app-loading *ngIf="cargado.Cartelera && cargado.Populares && cargado.PopularesInfantiles" ></app-loading>
+    <!-- <app-loading *ngIf="false" ></app-loading> -->
+    <app-error *ngIf="cargado.error" ></app-error>
+    <!-- <app-error *ngIf="true"  ></app-error> -->
+  </ng-template>
 </section>

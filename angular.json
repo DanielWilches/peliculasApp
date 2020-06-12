@@ -118,9 +118,13 @@
               "devServerTarget": "peliculasApp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-      }},
-      "defaultProject": "peliculasApp"
     }
-    
+  },
+  "defaultProject": "peliculasApp"
+}

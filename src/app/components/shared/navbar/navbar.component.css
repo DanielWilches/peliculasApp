@@ -162,4 +162,76 @@
 }
 
 /* fin del tamaño normal */
+@media screen and (max-width: 1263px) {
+  .contenedorNav--searchBar__form button {
+    font-size: 14px;
+    width: 22%;
+  }
+  .contenedorNav--searchBar__form input {
+    width: 78%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .contenedorNav--searchBar {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1046px) {
+  .contenedorNav--navegacion__titulo h1 {
+    font-size: 16px;
+  }
+  .contenedorNav--navegacion img {
+    width: 90px;
+    height: 90px;
+  }
+  .contenedorNav--navegacion__enlace a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .contenedorNav--navegacion {
+    width: 50%;
+    padding: 1%;
+  }
+  .contenedorNav--searchBar {
+    padding-left: 5%;
+    width: 50%;
+  }
+  .contenedorNav--searchBar__form button {
+    width: 20%;
+    padding: 0px 2px;
+  }
+  .contenedorNav--searchBar__form input {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .contenedorNav--navegacion__titulo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedorNav--navegacion img {
+    width: 70px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contenedorNav--navegacion {
+    width: 100%;
+  }
+  .contenedorNav--searchBar {
+    display: none;
+  }
+}
 /*# sourceMappingURL=navbar.component.css.map */

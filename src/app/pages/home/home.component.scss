@@ -1,12 +1,12 @@
 // contenedor 
-$var: peli[title];
 .container-home{
-    height: 100%;
+    height: 250%;
     width: 100%;
     display: grid;
-    grid-template-rows: 40% repeat(3,50%);
+    grid-template-rows: 15% repeat(3,30%);
     grid-template-columns: 100%;
-    row-gap: 4%; // esto genera un margen entre los elementos del contenedor, este caso el margen sera 4 % el ancho total
+    border: 2px solid black;
+    row-gap: 1%; // esto genera un margen entre los elementos del contenedor, este caso el margen sera 4 % el ancho total
     grid-template-areas: 
     'titulo'
     'cartelera'
@@ -84,3 +84,8 @@ $var: peli[title];
     font-weight: 600;
 }
 // 
+// @media screen and (max-heiht: 1000px) {
+//     .container-home{
+//         cp
+//     }
+// }

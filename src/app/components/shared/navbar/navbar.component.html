@@ -8,13 +8,15 @@
       />
     </div>
     <ul routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a routerLink="home"> Home</a>
+      <a (click)="navegar('home')" > Home</a>
+      <!-- <a routerLink="home" (click)="navegar('home')" > Home</a> -->
     </ul>
     <ul routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a routerLink="buscador"> Buscar</a>
+      <a (click)="navegar('buscador')" > Buscar</a>
+      <!-- <a routerLink="buscador" (click)="navegar('buscador')" > Buscar</a> -->
     </ul>
   </li>
-  <div class="contenedorNav--searchBar">
+  <div *ngIf="!cargaComponent.disintegrates"  class="contenedorNav--searchBar animate__animated  animate__fadeIn ">
     <form
       [formGroup]="formSearch"
       (ngSubmit)="search(formSearch)"

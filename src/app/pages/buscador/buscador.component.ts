@@ -16,6 +16,10 @@ export class BuscadorComponent implements OnInit {
   arrayBuquedas: any[];
   textSearch: string;
   search: any;
+  cargaComponente = {
+    loading: false,
+    error: false
+  };
   constructor(public iconS: IconsService, private peliculaS: PeliculasService,
               private acRoute: ActivatedRoute,  private router: Router) {}
 
@@ -29,17 +33,19 @@ export class BuscadorComponent implements OnInit {
     }
   }
   getBusqueda(busqueda: string) {
+    this.cargaComponente.loading = true;
     this.peliculaS.buscarPelicula(busqueda).subscribe((resul: any) => {
+      this.cargaComponente.loading = false;
       return this.arrayBuquedas = resul;
     }, (err: any) => {
-      console.log(err);
+      this.cargaComponente.loading = false;
+      this.cargaComponente.error = true;
     });
   }
   formsearch(formulario: FormGroup) {
     this.getBusqueda(formulario.value[`search`]);
   }
   validaciones(text: string) {
-    console.log(text);
     if ( text ){
       this.searchform = new FormGroup({
         search: new FormControl(text, [Validators.required, Validators.maxLength(20)])

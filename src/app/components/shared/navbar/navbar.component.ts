@@ -11,18 +11,21 @@ import { IconsService } from '../../../services/icons.service';
 })
 export class NavbarComponent implements OnInit {
   formSearch: FormGroup;
+  cargaComponent = {
+    disintegrates : false
+  };
   constructor(public iconsS: IconsService, private router: Router) {
     this.validacion();
   }
 
   ngOnInit(): void {
   }
-  // getsearch(text: string) {
-  //   this.PeliculasS.buscarPelicula(text).subscribe((resul: any) => {
-  //     console.log(resul);
-  //   });
-  // }
 
+  navegar(text: string) {
+    console.log(text);
+    this.router.navigate([`${text}/`]);
+    this.cargaComponent.disintegrates = false;
+  }
   search(forma: FormGroup) {
     if (forma.status === 'INVALID') {
       console.log('estado invalido');
@@ -31,6 +34,7 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['buscado/', forma.value[`search`]]);
       forma.controls.search.reset('');
       forma.controls[`search`].setErrors(null);
+      this.cargaComponent.disintegrates = true;
     }
   }
 
