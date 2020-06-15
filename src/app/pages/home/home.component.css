@@ -3,13 +3,12 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 15% (30%)[3];
-      grid-template-rows: 15% repeat(3, 30%);
+  -ms-grid-rows: 15% (28.3%)[3];
+      grid-template-rows: 15% repeat(3, 28.3%);
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  border: 2px solid black;
   row-gap: 1%;
-      grid-template-areas: 'titulo' 'cartelera' 'populares'   'popularesInfatiles';
+      grid-template-areas: 'titulo' 'cartelera' 'populares' 'popularesInfatiles';
 }
 
 .container-home__header {
@@ -50,7 +49,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: cartelera;
-  width: 100%;
+  width: 99%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,18 +58,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .container-home__populares {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: populares;
-  width: 100%;
+  width: 99%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,19 +73,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  /* background-color: red; */
 }
 
 .container-home__popularesInfatiles {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: popularesInfatiles;
-  width: 100%;
+  width: 99%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,21 +88,80 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  /* background-color: red; */
 }
 
-.subtitle {
+.home--cartalera__card,
+.home--populares__card,
+.home--popularesInfatiles__card {
+  height: 80%;
+}
+
+.home--cartalera__subtitle,
+.home--populares__subtitle,
+.home--cpopularesInfatiles__subtitle {
+  height: 10%;
+  width: 40%;
+  margin: 1% 4%;
+  padding-top: 20px;
   color: black;
-  margin: 0;
-  font-size: 25px;
-  height: 25px;
-  padding: 1% 2%;
-  width: 50%;
   font-weight: 600;
+  font-size: 30px;
+  text-align: left;
+}
+
+@media screen and (max-height: 999px) {
+  .home--cartalera__card,
+  .home--populares__card,
+  .home--popularesInfatiles__card {
+    height: 90%;
+  }
+}
+
+@media screen and (max-height: 881px) {
+  .home--cartalera__card,
+  .home--populares__card,
+  .home--popularesInfatiles__card {
+    height: 90%;
+  }
+  .home--cartalera__subtitle,
+  .home--populares__subtitle,
+  .home--cpopularesInfatiles__subtitle {
+    width: 90%;
+  }
+}
+
+@media screen and (max-height: 826px) {
+  .home--cartalera__card,
+  .home--populares__card,
+  .home--popularesInfatiles__card {
+    height: 90%;
+  }
+}
+
+@media screen and (max-height: 758px) {
+  .home--cartalera__subtitle,
+  .home--populares__subtitle,
+  .home--cpopularesInfatiles__subtitle {
+    height: 7%;
+    padding-top: 0px;
+    width: 90%;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .home--cartalera__subtitle,
+  .home--populares__subtitle,
+  .home--cpopularesInfatiles__subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .home--cartalera__subtitle,
+  .home--populares__subtitle,
+  .home--cpopularesInfatiles__subtitle {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=home.component.css.map */

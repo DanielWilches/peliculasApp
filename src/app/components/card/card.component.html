@@ -1,5 +1,5 @@
 <div *ngIf="Pelicula" class="container">
-  <div
+  <div 
     (click)="goPelicula(peli.id)"
     class="container--card"
     *ngFor="let peli of Pelicula | noImage; let i = index"
@@ -10,7 +10,8 @@
     <ng-template #elseTemplate>
       <img class="container--card__img" [src]="peli.backdrop_path" alt="" />
     </ng-template>
-    <h4 class="container--card__titulo">{{ peli.title }}</h4>
+    <h4 *ngIf="peli.title.length > 20"  class="container--card__titulo">{{ peli.title |titleSize: peli.title.length  }}</h4>
+    <h4 *ngIf="peli.title.length < 20"  class="container--card__titulo">{{ peli.title }}</h4>
     <p class="container--card__text">{{ peli.release_date }}</p>
     <div class="container--card__porcentajes">
       <p>0%</p>

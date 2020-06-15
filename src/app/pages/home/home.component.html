@@ -6,17 +6,17 @@
   <ng-container *ngIf="!cargado.Cartelera && !cargado.Populares && !cargado.PopularesInfantiles ; else elseTemplate">
   <!-- <ng-container *ngIf="false ; else elseTemplate"> -->
     <div class="container-home__cartelera animate__animated animate__fadeIn" name="cartelera">
-    <h3 class="subtitle">Peliculas en cartelera</h3>
-    <app-card [Pelicula]="Pcartelera"></app-card>
+    <h3 class="home--cartalera__subtitle">Peliculas en cartelera</h3>
+    <app-card class="home--cartalera__card" [Pelicula]="Pcartelera"></app-card>
   </div>
 
   <div class="container-home__populares" name="populares">
-    <h3 class="subtitle">Peliculas mas populares</h3>
-    <app-card [Pelicula]="Ppopulares"></app-card>
+    <h3 class="home--populares__subtitle">Peliculas mas populares</h3>
+    <app-card class="home--populares__card" [Pelicula]="Ppopulares"></app-card>
   </div>
   <div class="container-home__popularesInfatiles" name="popularesInfatiles">
-    <h3 class="subtitle">Las peliuclas infantiles mas populares</h3>
-    <app-card [Pelicula]="PpopuInfatiles"></app-card>
+    <h3 class="home--cpopularesInfatiles__subtitle">Las peliuclas infantiles mas populares</h3>
+    <app-card class="home--popularesInfatiles__card" [Pelicula]="PpopuInfatiles"></app-card>
   </div>
   </ng-container>
   <ng-template #elseTemplate>

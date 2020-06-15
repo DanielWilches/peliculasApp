@@ -1,18 +1,15 @@
 // contenedor 
-.container-home{
+.container-home {
     height: 250%;
     width: 100%;
     display: grid;
-    grid-template-rows: 15% repeat(3,30%);
+    grid-template-rows: 15% repeat(3, 28.3%);
     grid-template-columns: 100%;
-    border: 2px solid black;
+    // border: 2px solid black;
     row-gap: 1%; // esto genera un margen entre los elementos del contenedor, este caso el margen sera 4 % el ancho total
-    grid-template-areas: 
-    'titulo'
-    'cartelera'
-    'populares'  
-    'popularesInfatiles';
+    grid-template-areas: 'titulo' 'cartelera' 'populares' 'popularesInfatiles';
 }
+
 // header
 .container-home__header {
     width: 100%;
@@ -27,65 +24,128 @@
     border-bottom-right-radius: 5px;
     // border-radius-bo: 5px;
 }
+
 // header titulo
-.container-home__header h2 { 
+.container-home__header h2 {
     margin: 0 5%;
     padding: 0px;
     color: white;
     font-size: 45px;
 }
+
 // header descripción
 .container-home__header p {
     margin: 2% 5%;
     color: white;
     font-size: 26px;
 }
+
 // caja cartelera
 .container-home__cartelera {
     grid-area: cartelera;
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-
+    // justify-content: space-around;
+    // border: 2px solid black;
 }
+
 .container-home__populares {
     grid-area: populares;
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    /* background-color: red; */
-    
+    // justify-content: space-around;
+    // border: 2px solid black;
 }
+
 .container-home__popularesInfatiles {
     grid-area: popularesInfatiles;
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    /* background-color: red; */
+    // justify-content: space-around;
+    // border: 2px solid black;
+}
+
+// tamaño de cada carta
+.home--cartalera__card,
+.home--populares__card,
+.home--popularesInfatiles__card {
+    height: 80%;
 }
 
 //  reutilizabes
-.subtitle {
-    color:black;
-    margin: 0;
-    font-size: 25px;
-    height: 25px;
-    padding: 1% 2%;
-    width: 50%;
+.home--cartalera__subtitle,
+.home--populares__subtitle,
+.home--cpopularesInfatiles__subtitle {
+    height: 10%;
+    width: 40%;
+    margin: 1% 4%;
+    padding-top: 20px;
+    color: black;
     font-weight: 600;
+    font-size: 30px;
+    text-align: left;
 }
-// 
-// @media screen and (max-heiht: 1000px) {
-//     .container-home{
-//         cp
-//     }
-// }
+
+@media screen and (max-height:999px) {
+    .home--cartalera__card,
+    .home--populares__card,
+    .home--popularesInfatiles__card {
+        height: 90%;
+    }
+}
+
+@media screen and(max-height: 881px) {
+    .home--cartalera__card,
+    .home--populares__card,
+    .home--popularesInfatiles__card {
+        height: 90%;
+    }
+    .home--cartalera__subtitle,
+    .home--populares__subtitle,
+    .home--cpopularesInfatiles__subtitle {
+        width: 90%;
+    }
+}
+
+// 827
+@media screen and(max-height: 826px) {
+    .home--cartalera__card,
+    .home--populares__card,
+    .home--popularesInfatiles__card {
+        height: 90%;
+    }
+}
+
+@media screen and (max-height: 758px) {
+
+    .home--cartalera__subtitle,
+    .home--populares__subtitle,
+    .home--cpopularesInfatiles__subtitle {
+        height: 7%;
+        padding-top: 0px;
+        width: 90%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .home--cartalera__subtitle,
+    .home--populares__subtitle,
+    .home--cpopularesInfatiles__subtitle {
+        font-size: 20px;
+    }
+}
+// 387
+@media screen and (max-width: 387px){
+    .home--cartalera__subtitle,
+    .home--populares__subtitle,
+    .home--cpopularesInfatiles__subtitle {
+        font-size: 16px;
+    }
+}
