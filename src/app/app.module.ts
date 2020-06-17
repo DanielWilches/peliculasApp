@@ -29,6 +29,7 @@ import { SearchCardsComponent } from './components/search-cards/search-cards.com
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { NoLogoPipe } from './pipes/no-logo.pipe';
 import { TitleSizePipe } from './pipes/title-size.pipe';
+import { TimePipe } from './pipes/time.pipe';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { TitleSizePipe } from './pipes/title-size.pipe';
     NoLogoPipe,
     SearchCardsComponent,
     TitleSizePipe,
+    TimePipe,
   ],
   imports: [
     AppRoutingModule,

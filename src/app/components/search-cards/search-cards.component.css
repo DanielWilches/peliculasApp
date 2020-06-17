@@ -1,7 +1,7 @@
 .container {
-  width: 100%;
+  width: 95%;
   height: 200px;
-  margin: 2.5% 0px;
+  margin: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,5 +53,41 @@
 
 .container--info blockquote {
   margin: 10px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container__img {
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container__img {
+    width: 17%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container__img {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container__img {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container__img {
+    width: 30%;
+  }
+  .container--info blockquote {
+    display: none;
+  }
+  .container--info {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=search-cards.component.css.map */
