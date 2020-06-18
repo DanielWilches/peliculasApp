@@ -1,4 +1,4 @@
-<!-- <ng-container *ngIf="!cargadoComponente.loading; else elseTemplate"> -->
+<ng-container *ngIf="!cargadoComponente.loading; else elseTemplate">
   <section class="container animate__animated animate__fadeIn">
       <div class="container--info__poster" >
         <img [src]="pelicula['poster_path']" alt="" />
@@ -24,6 +24,9 @@
         <P class="container--info__titulo"> vista general </P>
         <blockquote class="container--info__resumen">
           {{ pelicula.overview }}
+        </blockquote>
+        <blockquote *ngIf="!pelicula.overview "  class="container--info__resumen">
+          Este título no tiene una descripción
         </blockquote>
         <div class="container--info__costos">
           <p>presupuesto: {{ pelicula.budget | currency }}</p>
@@ -60,8 +63,8 @@
     </section>
 
   </section>
-<!-- </ng-container>
-
+</ng-container>
+<app-error *ngIf="cargadoComponente.err"  ></app-error>
 <ng-template #elseTemplate>
   <app-loading></app-loading>
-</ng-template> -->
+</ng-template>

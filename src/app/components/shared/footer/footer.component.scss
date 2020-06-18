@@ -1,33 +1,23 @@
-.container {
+.container{
   width: 100%;
   height: 100%;
   background-color: #032541;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
-.container--text {
+.container--text { 
   text-align: center;
   color: white;
   margin: 10px 0px 0px 20px;
   font-size: 20px;
 }
-
 .container--redes {
   height: 100%;
 }
-
-.container--redes__enlace {
+.container--redes__enlace { 
   height: 50%;
   margin: 5px 10px 5px 10px;
   padding: 7px 5px 2px 5px;
@@ -39,68 +29,57 @@
   text-transform: capitalize;
   color: white;
 }
-
 .githud:hover {
-  -webkit-transition: 1s;
   transition: 1s;
   background-color: black;
 }
-
 .instagram:hover {
-  -webkit-transition: 1s;
   transition: 1s;
-  background-image: -webkit-gradient(linear, left top, right top, from(#FEDA75), color-stop(#FA7E1E), color-stop(#D62976), color-stop(#962FBF), to(#4F5BD5));
-  background-image: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
-}
+  background-image: linear-gradient( to right,#FEDA75,  #FA7E1E, #D62976, #962FBF, #4F5BD5 );
+} 
 
 .linkedin:hover {
-  -webkit-transition: 1s;
   transition: 1s;
   background-color: #00609D;
 }
-
 .facebook:hover {
-  -webkit-transition: 1s;
   transition: 1s;
   background-color: #1298F6;
 }
-
-@media screen and (max-width: 1280px) and (max-height: 800px) {
+// 1280px x 800px
+@media screen and(max-width: 1280px)  and(max-height: 800px) {
+  .container--redes__enlace {
+    margin-bottom: 0px;
+  }
+}
+// 1280px x 720px
+@media screen and(max-width: 1280px)  and(max-height: 720px) {
   .container--redes__enlace {
     margin-bottom: 0px;
   }
 }
 
-@media screen and (max-width: 1280px) and (max-height: 720px) {
-  .container--redes__enlace {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (max-width: 716px) {
+@media screen and(max-width: 716px)  {
   .instagram {
     display: none;
-  }
+  } 
   .container--text {
     font-size: 16px;
   }
 }
-
+// 599
 @media screen and (max-width: 599px) {
   .facebook {
     display: none;
   }
 }
-
 @media screen and (max-width: 478px) {
   .githud {
     display: none;
   }
 }
-
 @media screen and (max-width: 324px) {
   .linkedin {
     display: none;
   }
 }
-/*# sourceMappingURL=footer.component.css.map */

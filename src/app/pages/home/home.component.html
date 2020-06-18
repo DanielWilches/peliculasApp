@@ -20,9 +20,9 @@
   </div>
   </ng-container>
   <ng-template #elseTemplate>
-    <app-loading *ngIf="cargado.Cartelera && cargado.Populares && cargado.PopularesInfantiles" ></app-loading>
-    <!-- <app-loading *ngIf="false" ></app-loading> -->
+    <!-- <app-loading *ngIf="cargado.Cartelera && cargado.Populares && cargado.PopularesInfantiles" ></app-loading> -->
+    <app-loading  class="container--card__alert" ></app-loading>
     <app-error *ngIf="cargado.error" ></app-error>
-    <!-- <app-error *ngIf="true"  ></app-error> -->
+    <!-- <app-error class="container--card__alert" ></app-error> -->
   </ng-template>
 </section>

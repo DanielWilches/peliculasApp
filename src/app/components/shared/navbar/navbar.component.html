@@ -8,15 +8,18 @@
       />
     </div>
     <ul routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a (click)="navegar('home')" > Home</a>
+      <a (click)="navegar('home')"> Home</a>
       <!-- <a routerLink="home" (click)="navegar('home')" > Home</a> -->
     </ul>
     <ul routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a (click)="navegar('buscador')" > Buscar</a>
+      <a (click)="navegar('buscador')"> Buscar</a>
       <!-- <a routerLink="buscador" (click)="navegar('buscador')" > Buscar</a> -->
     </ul>
   </li>
-  <div *ngIf="!cargaComponent.disintegrates"  class="contenedorNav--searchBar animate__animated  animate__fadeIn ">
+  <div
+    *ngIf="!cargaComponent.disintegrates"
+    class="contenedorNav--searchBar animate__animated animate__fadeIn"
+  >
     <form
       [formGroup]="formSearch"
       (ngSubmit)="search(formSearch)"
@@ -24,13 +27,15 @@
       novalidate
     >
       <input
+        class="searchBar--form__text"
         formControlName="search"
         type="text"
         placeholder="ingresa tu busqueda"
         [ngClass]="{
           inputError:
-            formSearch.controls.search.errors?.required &&
-            formSearch.controls.search.touched
+            (formSearch.controls.search.errors?.required &&
+              formSearch.controls.search.touched) ||
+            formSearch.controls.search.errors?.maxlength
         }"
       />
       <button type="submit" [disabled]="formSearch.status === 'INVALID'">
@@ -39,7 +44,7 @@
       </button>
     </form>
 
-    <span
+    <!-- <span
       *ngIf="
         (formSearch.controls.search.errors?.required &&
           formSearch.controls.search.touched) ||
@@ -47,6 +52,6 @@
       "
       class="textError animate__animated animate__fadeIn"
       >no se puede realizar la busqueda*</span
-    >
+    > -->
   </div>
 </nav>

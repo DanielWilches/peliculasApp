@@ -16,7 +16,8 @@ import { logging } from 'protractor';
 export class PeliculaComponent implements OnInit {
   pelicula: any;
   cargadoComponente = {
-    loading: true
+    loading: true,
+    err: false
   };
   constructor(private acRouter: ActivatedRoute, private router: Router, private peliculasS: PeliculasService) {
   }
@@ -34,6 +35,8 @@ export class PeliculaComponent implements OnInit {
       }, 3000);
       this.pelicula = this.validoImg(res);
       return this.pelicula;
+    }, err => {
+      this.cargadoComponente.err = true;
     });
   }
 
@@ -56,11 +59,9 @@ export class PeliculaComponent implements OnInit {
     // console.log(pelicula[`backdrop_path`]);
     // console.log(pelicula[`poster_path`]);
     // this.addFondo(pelicula[`backdrop_path`]);
-    console.log(pelicula);
     return pelicula;
   }
   addFondo( text: string ){
-    console.log(text);
     const contenedor = document.querySelector('contenedor');
     contenedor.classList.add('prueba');
     return text;

@@ -11,7 +11,8 @@
         <div class="container--info" >
             <p>{{ busqueda.title }}</p>
             <time>{{ busqueda.release_date  | date: 'dd-MMMM-yyyy' }}</time>
-            <blockquote>{{ busqueda.overview }}</blockquote>
+            <blockquote class="container--info__descricion" >{{ busqueda.overview }}</blockquote>
+            <p *ngIf="!busqueda.overview"  > Este título no tiene una descripción  </p>
         </div>   
     </section>
 </ng-container>

@@ -1,1 +1,17 @@
-<main class="container" ></main>
+<main class="container" >
+  <p class="container--text" >&copy;{{year | date:'yyyy' }} Daniel Prieto Wilches</p>
+  <div class="container--redes" >
+    <a [href]="redes.githud" target="_blank" class="container--redes__enlace githud" >githud
+      <fa-icon [icon]="iconS.faGithub" ></fa-icon>
+    </a>
+    <a [href]="redes.linkedin" target="_blank" class="container--redes__enlace linkedin" >linkedin
+      <fa-icon [icon]="iconS.faLinkedin" ></fa-icon>
+    </a>
+    <a [href]="redes.instagram" target="_blank" class="container--redes__enlace instagram" >instagram
+      <fa-icon [icon]="iconS.faInstagram" ></fa-icon>
+    </a>
+    <a [href]="redes.facebook" target="_blank" class="container--redes__enlace facebook" >facebook
+      <fa-icon [icon]="iconS.faFacebook" ></fa-icon>
+    </a>
+  </div>
+</main>

@@ -39,9 +39,22 @@
     color: grey;
 }
 
-.container--info blockquote {
+.container--info__descricion{
+    display: block;
+    overflow-y: scroll;
     margin: 10px 10px;
+    width: 90%;
 }
+.container--info__descricion::-webkit-scrollbar{
+    width: 7px;
+    background: rgba($color: #032541, $alpha: .1);
+    border-radius: 4px;
+}
+.container--info__descricion::-webkit-scrollbar-thumb {
+    background: rgba($color: #032541, $alpha: .8);
+    border-radius: 4px;
+}
+
 
 @media screen and (max-width: 1000px) {
     .container__img {

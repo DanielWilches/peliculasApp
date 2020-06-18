@@ -21,9 +21,22 @@
 .contenedor--main {
     grid-area: main;
     overflow-y: scroll;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     // overflow: hidden;
 }
+.contenedor--main::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+.contenedor--main::-webkit-scrollbar-thumb {
+    background: rgba($color: #032541, $alpha: .3);
+    border-radius: 4px;
+}
+.contenedor--main::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: #032541, $alpha: .7);
+    transition: 2s;
+}
+
 .contenedor--footer {
     grid-area: footer;
 }
@@ -51,3 +64,4 @@
         ;  
     }
 }
+// 360px x 640px

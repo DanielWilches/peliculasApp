@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
 
   validacion() {
     this.formSearch = new FormGroup({
-      search: new FormControl('', [Validators.required, Validators.maxLength(30)])
+      search: new FormControl('', [Validators.required, Validators.maxLength(40)])
     });
   }
 }

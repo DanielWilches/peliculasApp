@@ -91,7 +91,10 @@
     font-size: 30px;
     text-align: left;
 }
-
+.container--card__alert {
+    width: 100%;
+    height: 100%;
+}
 @media screen and (max-height:999px) {
     .home--cartalera__card,
     .home--populares__card,

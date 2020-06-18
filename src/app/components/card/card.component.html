@@ -19,6 +19,7 @@
     </div>
     <div class="container--card__PopularBarra">
       <div [ngStyle]="{ 'width.%': peli.vote_average * 10 }"></div>
+      <p *ngIf="peli.vote_average === 0"  > no hay voto</p>
     </div>
   </div>
 </div>
