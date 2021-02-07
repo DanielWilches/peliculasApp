@@ -6,8 +6,9 @@ import { Peliculas } from '../Interface/peliculas.interface';
 })
 export class NoImagePipe implements PipeTransform {
   transform(pelicula: Peliculas[]): Peliculas[] {
-    const URL = 'http://image.tmdb.org/t/p/w500';
-    const NOIMG = `../assets/img/no_img.png`;
+    const URL = 'http://image.tmdb.org/t/p/w400';
+    //const NOIMG = `../assets/img/no_img.png`;
+    const NOIMG = 'src/assets/img/header.jpg';
     for (const img of pelicula) {
       if (img.poster_path) {
         img.poster_path = `${URL}${img.poster_path}`;

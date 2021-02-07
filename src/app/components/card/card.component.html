@@ -2,12 +2,12 @@
   <div (click)="goPelicula(peli.id)" class="conCard--card" *ngFor="let peli of Pelicula | noImage; let i = index">
     <ng-container *ngIf="peli.poster_path; else elseTemplate">
       <div class="conCard--card__img">
-        <img [src]="peli.poster_path" alt="" />
+        <img [src]="peli.poster_path" alt="poster" />
       </div>
     </ng-container>
     <ng-template #elseTemplate>
       <div class="conCard--card__img">
-        <img [src]="peli.backdrop_path" alt="" />
+        <img [src]="peli.backdrop_path" alt="badrop_path" />
       </div>
     </ng-template>
     <div class="conCard-info">
