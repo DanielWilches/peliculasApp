@@ -1,25 +1,35 @@
-<div *ngIf="Pelicula" class="container">
-  <div 
-    (click)="goPelicula(peli.id)"
-    class="container--card"
-    *ngFor="let peli of Pelicula | noImage; let i = index"
-  >
+<div *ngIf="Pelicula" class="conCard">
+  <div (click)="goPelicula(peli.id)" class="conCard--card" *ngFor="let peli of Pelicula | noImage; let i = index">
     <ng-container *ngIf="peli.poster_path; else elseTemplate">
-      <img class="container--card__img" [src]="peli.poster_path" alt="" />
+      <div class="conCard--card__img">
+        <img [src]="peli.poster_path" alt="" />
+      </div>
     </ng-container>
     <ng-template #elseTemplate>
-      <img class="container--card__img" [src]="peli.backdrop_path" alt="" />
+      <div class="conCard--card__img">
+        <img [src]="peli.backdrop_path" alt="" />
+      </div>
     </ng-template>
-    <h4 *ngIf="peli.title.length > 20"  class="container--card__titulo">{{ peli.title |titleSize: peli.title.length  }}</h4>
-    <h4 *ngIf="peli.title.length < 20"  class="container--card__titulo">{{ peli.title }}</h4>
-    <p class="container--card__text">{{ peli.release_date }}</p>
-    <div class="container--card__porcentajes">
-      <p>0%</p>
-      <p>100%</p>
-    </div>
-    <div class="container--card__PopularBarra">
-      <div [ngStyle]="{ 'width.%': peli.vote_average * 10 }"></div>
-      <p *ngIf="peli.vote_average === 0"  > no hay voto</p>
+    <div class="conCard-info">
+      <h4 *ngIf="peli.title.length > 20" class="container--card__titulo">{{ peli.title |titleSize: peli.title.length }}
+      </h4>
+      <h4 *ngIf="peli.title.length < 20" class="container--card__titulo">{{ peli.title }}</h4>
+      <p class="conCard--card__text">{{ peli.release_date }}</p>
+      <div class="conCard--card__porcentajes" *ngIf="peli.vote_average !== 0">
+        <p>0%</p>
+        <p  [ngStyle]="{'left.%':peli.vote_average * 10 }">{{peli.vote_average * 10}}%</p>
+      </div>
+      <div  *ngIf="peli.vote_average !== 0" class="conCard--card__PopularBarra">
+        <div  class="card--puplarBarra__fonfo"></div>
+        <div class="card--puplarBarra__verde" [ngStyle]="{ 'width.%': peli.vote_average * 10 }"></div>
+      </div>
+      <div class="conCard--card__noVoto" *ngIf="peli.vote_average === 0" >
+        <p > no hay voto</p>
+      </div>
+      <p class="conCard--card__textinfo" >*Los pocentajes que se muestran se refieren al total de pesonas que votaron positivamente o negativamente por la pelicula</p>
     </div>
   </div>
+
+  <div class="conCard--card__space" ></div>
+
 </div>

@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router, NavigationEnd, NavigationStart } from '@angular/router';
+
+import { ActivatedRoute, Router } from '@angular/router';
 // import { Peliculas } from '../../Interface/peliculas.interface';
 import { PeliculasService } from '../../services/peliculas.service';
-// import { url } from 'inspector';
-import { logging } from 'protractor';
 
 
 @Component({
   selector: 'app-pelicula',
-  templateUrl: './pelicula.component.html',
-  styleUrls: ['./pelicula.component.css']
+  templateUrl: './pelicula.component.html'
 })
 
 export class PeliculaComponent implements OnInit {

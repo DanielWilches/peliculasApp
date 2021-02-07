@@ -1,0 +1,67 @@
+
+$azulBase:#032541;
+$colorGrey: rgb(158, 158, 158);
+$fondoBarra:rgba(190, 45, 45, 0.5);
+$positivoBarra:rgb(130, 224, 7);
+
+//includes
+
+@mixin scrolls {
+    &::-webkit-scrollbar {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: 5s;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: 5s;
+    }
+  }
+    &::-webkit-scrollbar-thumb{
+    background-color:rgba(3, 37, 65,.3) ;
+    border-radius: 6px;
+    &:hover{
+      background-color:rgba(3, 37, 65,1) ;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@mixin  noVoto {
+    width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background-color: rgb(177, 176, 176);
+  padding: 5px 0;
+  margin: 10px 0;
+  p {
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
+@mixin  porcertajeVotos {
+    p{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: $colorGrey;
+    &:nth-child(2){
+      position: absolute;
+      &::before{
+        content: '';
+        position: relative;
+        top: 20px;
+        border: 1px solid $colorGrey;
+      }
+    }
+  }
+}
+
+

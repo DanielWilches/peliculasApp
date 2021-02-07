@@ -3,8 +3,7 @@ import { IconsService } from '../../../services/icons.service';
 
 @Component({
   selector: 'app-loading',
-  templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.css']
+  templateUrl: './loading.component.html'
 })
 export class LoadingComponent implements OnInit {
 

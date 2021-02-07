@@ -1,0 +1,42 @@
+
+@import './Util/variables.scss';
+@import './Util/fonts.scss';
+.header, .main, .footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+@import './shared/navbar.scss';
+.main{
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: white;
+  height: auto;
+  font-family: $fontFiraRegular;
+  padding: 0px  40px;
+  @media screen and(max-width: 1024px) {
+    padding: 0;
+
+  }
+}
+@import './pages/home.scss';
+@import './pages/buscador.scss';
+@import './pages/pelicula.scss';
+.header, .footer{
+  background-color:$azulBase;
+  font-family: $fontRobotoRegular;
+}
+.footer{
+  margin-top: 25px;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+}
+@import './shared/footer.scss'
+
+

@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-cards',
-  templateUrl: './search-cards.component.html',
-  styleUrls: ['./search-cards.component.css']
+  templateUrl: './search-cards.component.html'
 })
 export class SearchCardsComponent implements OnInit {
   @Input() arraybusqueda: any[];

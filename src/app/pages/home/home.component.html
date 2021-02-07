@@ -1,20 +1,25 @@
-<section class="container-home">
-  <header class="container-home__header">
+<section class="conHome">
+  <header class="conHome__header">
+    <div  class="conHome--header__img">
+    <img src="../../../assets/img/header.jpg" alt="header">
+    </div>
+    <div class="conHome--header__title" >
     <h2>Bienvenidos.</h2>
     <p>Millones de peliculas. Explora ahora.</p>
+    </div>
   </header>
   <ng-container *ngIf="!cargado.Cartelera && !cargado.Populares && !cargado.PopularesInfantiles ; else elseTemplate">
   <!-- <ng-container *ngIf="false ; else elseTemplate"> -->
-    <div class="container-home__cartelera animate__animated animate__fadeIn" name="cartelera">
+    <div class="conHome__cartelera" name="cartelera">
     <h3 class="home--cartalera__subtitle">Peliculas en cartelera</h3>
     <app-card class="home--cartalera__card" [Pelicula]="Pcartelera"></app-card>
   </div>
 
-  <div class="container-home__populares" name="populares">
+  <div class="conHome__populares" name="populares">
     <h3 class="home--populares__subtitle">Peliculas mas populares</h3>
     <app-card class="home--populares__card" [Pelicula]="Ppopulares"></app-card>
   </div>
-  <div class="container-home__popularesInfatiles" name="popularesInfatiles">
+  <div class="conHome__popularesInfatiles" name="popularesInfatiles">
     <h3 class="home--cpopularesInfatiles__subtitle">Las peliuclas infantiles mas populares</h3>
     <app-card class="home--popularesInfatiles__card" [Pelicula]="PpopuInfatiles"></app-card>
   </div>

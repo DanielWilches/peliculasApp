@@ -30,6 +30,7 @@ import { NoImagePipe } from './pipes/no-image.pipe';
 import { NoLogoPipe } from './pipes/no-logo.pipe';
 import { TitleSizePipe } from './pipes/title-size.pipe';
 import { TimePipe } from './pipes/time.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { TimePipe } from './pipes/time.pipe';
     ScrollingModule,
     FontAwesomeModule,
     RouterModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

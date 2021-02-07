@@ -1,54 +1,59 @@
 <ng-container *ngIf="!cargadoComponente.loading; else elseTemplate">
-  <section class="container animate__animated animate__fadeIn">
-      <div class="container--info__poster" >
-        <img [src]="pelicula['poster_path']" alt="" />
-        <a  [href]="pelicula.homepage" target="_blank" rel="noopener noreferrer">pagina del film</a>
+  <section class="conpeli">
+    <div class="conpeli--info__poster">
+      <div class="info--poster__img">
+        <img [src]="pelicula['poster_path']" alt="poster_path" />
       </div>
-      <article class="container--info__articulo">
-        <div class="info--articulo__titulos">
-          <h3>{{ pelicula["title"] }}</h3>
+      <a [href]="pelicula.homepage" target="_blank" rel="noopener noreferrer">pagina del film</a>
+    </div>
+    <article class="conpeli--info__articulo">
+      <div class="info--articulo__titulos">
+        <h3>{{ pelicula["title"] }}
           <time>({{ pelicula.release_date | date: "yyyy" }}) </time>
-        </div>
+        </h3>
+      </div>
 
-        <div class="container--info__descricion">
-          <time class="info--descricion__date">{{ pelicula.release_date }}</time>
-          <small class="info--descricion__idioma">({{ pelicula.original_language | uppercase }})</small>
-          <ul class="info--descricion__generos">
-            <li *ngFor="let genero of pelicula.genres; let i = index">{{ genero.name }}</li>
-          </ul>
-          <time class="info--descricion__duracion">{{ pelicula.runtime |time }}</time>
-          <p class="info--descricion__status">Estado: {{ pelicula.status }}</p>
-        </div>
+      <div class="conpeli--info__descricion">
+        <time class="info--descricion__date">{{ pelicula.release_date }}</time>
+        <small class="info--descricion__idioma">({{ pelicula.original_language | uppercase }})</small>
+        <ul class="info--descricion__generos">
+          <li *ngFor="let genero of pelicula.genres; let i = index">{{ genero.name }}</li>
+        </ul>
+        <time class="info--descricion__duracion">{{ pelicula.runtime |time }}</time>
+        <p class="info--descricion__status">Estado: {{ pelicula.status }}</p>
+      </div>
 
-        <cite class="container--info__cite">{{ pelicula.tagline }} </cite>
-        <P class="container--info__titulo"> vista general </P>
-        <blockquote class="container--info__resumen">
-          {{ pelicula.overview }}
-        </blockquote>
-        <blockquote *ngIf="!pelicula.overview "  class="container--info__resumen">
-          Este título no tiene una descripción
-        </blockquote>
-        <div class="container--info__costos">
-          <p>presupuesto: {{ pelicula.budget | currency }}</p>
-          <p>Ingresos: {{ pelicula.revenue | currency }}</p>
+      <cite class="conpeli--info__cite">{{ pelicula.tagline }} </cite>
+      <P class="conpeli--info__titulo"> vista general </P>
+      <blockquote class="conpeli--info__resumen">
+        {{ pelicula.overview }}
+      </blockquote>
+      <blockquote *ngIf="!pelicula.overview " class="conpeli--info__resumen">
+        Este título no tiene una descripción
+      </blockquote>
+      <div class="conpeli--info__costos">
+        <p>presupuesto: {{ pelicula.budget | currency }}</p>
+        <p>Ingresos: {{ pelicula.revenue | currency }}</p>
+      </div>
+      <div class="conpeli--info__popular">
+        <p>calificacion del usuario:</p>
+        <div *ngIf="pelicula.vote_average > 0" class="info__popular__porcentajes">
+          <p>0%</p>
+          <p [ngStyle]="{'left.%': pelicula.vote_average * 10}"  >{{ pelicula.vote_average * 10}}%</p>
+          <p>100%</p>
         </div>
-        <div class="container--info__popular">
-          <p>calificacion del usuario:</p>
-          <div class="info__popular__porcentajes">
-            <p>0%</p>
-            <p>100%</p>
-          </div>
-          <div class="info__popular__PopularBarra">
-            <div [ngStyle]="{ 'width.%': pelicula.vote_average * 10 }"></div>
-            <p *ngIf="pelicula.vote_average <= 0"  class="info__popular__infocalificacion" > No hay calificacion </p>
-          </div>
+        <div class="info--popular__PopularBarra" *ngIf="pelicula.vote_average > 0">
+          <div class="barra--votos" [ngStyle]="{ 'width.%': pelicula.vote_average * 10 }"></div>
+          <div class="fondo--votos"></div>
         </div>
-
-        <div class="container--info__costos">
-          <p>Total votos: {{ pelicula.vote_count | number }}</p>
-          <p>pupular {{ pelicula.popularity }}</p>
-        </div>
-      </article>
+      </div>
+      <div class="info--votos__no" *ngIf="pelicula.vote_average <= 0">
+        <p > No hay calificacion </p>
+      </div>
+      <div class="container--info__costos">
+        <p>Total votos: {{ pelicula.vote_count | number }}</p>
+      </div>
+    </article>
 
 
     <section class="container--moreinfo">
@@ -56,7 +61,9 @@
       <h4>Compañías de producción</h4>
       <div class="container--moreinfo__production_companies">
         <div *ngFor="let companies of pelicula.production_companies" class="moreinfo--production_companies__card">
+        <div class="production--companies__cardIMG" >
           <img [src]="companies.logo_path | noLogo" alt="logo" />
+        </div>
           <p>{{ companies.name }}</p>
         </div>
       </div>
@@ -64,7 +71,7 @@
 
   </section>
 </ng-container>
-<app-error *ngIf="cargadoComponente.err"  ></app-error>
+<app-error *ngIf="cargadoComponente.err"></app-error>
 <ng-template #elseTemplate>
   <app-loading></app-loading>
 </ng-template>
