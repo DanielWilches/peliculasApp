@@ -8,7 +8,7 @@ export class NoImagePipe implements PipeTransform {
   transform(pelicula: Peliculas[]): Peliculas[] {
     const URL = 'http://image.tmdb.org/t/p/w400';
     //const NOIMG = `../assets/img/no_img.png`;
-    const NOIMG = './assets/img/header.jpg';
+    const NOIMG = 'assets/img/no_img.png';
     for (const img of pelicula) {
       if (img.poster_path) {
         img.poster_path = `${URL}${img.poster_path}`;
