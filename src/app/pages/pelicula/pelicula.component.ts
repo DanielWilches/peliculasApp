@@ -27,10 +27,8 @@ export class PeliculaComponent implements OnInit {
 
   getPelicula(id: number) {
     this.peliculasS.buscarPeliId(id).subscribe((res: object) => {
-      setTimeout(() => {
-        this.cargadoComponente.loading = false;
-      }, 3000);
       this.pelicula = this.validoImg(res);
+      this.cargadoComponente.loading = false;
       return this.pelicula;
     }, err => {
       this.cargadoComponente.err = true;
@@ -39,7 +37,7 @@ export class PeliculaComponent implements OnInit {
 
   validoImg( pelicula: object ): object{
     const URL = 'http://image.tmdb.org/t/p/w500';
-    const NOIMG = `../assets/img/no_img.png`;
+    const NOIMG = `assets/img/no_img.png`;
     if  ( pelicula[`backdrop_path`] &&  pelicula[`poster_path`] ) {
       pelicula[`backdrop_path`] = `${URL}${pelicula[`backdrop_path`]}`;
       pelicula[`poster_path`] = `${URL}${pelicula[`poster_path`]}`;
