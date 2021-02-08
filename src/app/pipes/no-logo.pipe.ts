@@ -7,7 +7,10 @@ export class NoLogoPipe implements PipeTransform {
 
   transform(value: string): string {
     const URL = 'http://image.tmdb.org/t/p/w500';
-    const NOIMG = `../assets/img/no_img.png`;
+    // dev
+    // const NOIMG = `../assets/img/no_img.png`;
+    // product
+    const NOIMG = 'assets/img/no_img.png';
     if (value) {
       value = `${URL}${value}`;
     } else {
