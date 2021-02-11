@@ -1,0 +1,42 @@
+@import "../Util/variables.scss";
+
+.conAlert {
+  @include conAlerts($colorLoading);
+
+  @media screen and (max-width: 767px) {
+    .conAlert--titulo {
+      font-size: 25px;
+    }
+    .conAlert--errorText {
+      font-size: 16px;
+    }
+
+  }
+}
+.conAlert--titulo {
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+  height: auto;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+
+}
+fa-icon {
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+.conAlert--message{
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  border-top: 1px solid white;
+  padding: 20px;
+}

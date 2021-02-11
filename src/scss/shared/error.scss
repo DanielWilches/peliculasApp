@@ -1,0 +1,6 @@
+
+@import '../Util/variables.scss';
+.conError{
+  @include  conAlerts($colorError);
+  margin-bottom: 70px;
+}

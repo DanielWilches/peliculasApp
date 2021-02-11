@@ -11,6 +11,7 @@ import { pipe } from 'rxjs';
 export class PeliculasService {
   private apiKey = '8dcbb02ff53091b82b1169ec5547347e';
   private api = 'https://api.themoviedb.org/3';
+  // private api = 'https://api.themoviedb.org/sw';
   private lenguageES = 'language=es';
   constructor(private http: HttpClient) {
     // this.getCartelera();

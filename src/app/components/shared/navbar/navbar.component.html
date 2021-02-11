@@ -1,53 +1,49 @@
 <nav class="contenedorNav">
 
-  <div class="contenedorNav--logo" >
-      <h1 class="contenedorNav--logo__titulo" >PeliculasApp |</h1>
-      <div class="containeNav--logo__img">
+  <div class="contenedorNav--logo">
+    <h1 class="contenedorNav--logo__titulo">PeliculasApp |</h1>
+    <div class="containeNav--logo__img">
       <img
         src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
         alt="tmtb_logo" />
-      </div>
+    </div>
   </div>
 
-  <!--opcionees del menu-->
-  <ul class="contenedorNav--navegacion">
-    <li routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a (click)="navegar('home')"> Home</a>
-      <!-- <a routerLink="home" (click)="navegar('home')" > Home</a> -->
-    </li>
-    <li routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
-      <a (click)="navegar('buscador')"> Buscar</a>
-      <!-- <a routerLink="buscador" (click)="navegar('buscador')" > Buscar</a> -->
-    </li>
-  </ul>
 
 
-  <div
-    *ngIf="!cargaComponent.disintegrates"
-    class="contenedorNav--searchBar"
-  >
-    <form
-      [formGroup]="formSearch"
-      (ngSubmit)="search(formSearch)"
-      class="contenedorNav--searchBar__form"
-      novalidate
-    >
-      <input
-        class="searchBar--form__text"
-        formControlName="search"
-        type="text"
-        placeholder="ingresa tu busqueda"
-        [ngClass]="{
-          inputError:
-            (formSearch.controls.search.errors?.required &&
-              formSearch.controls.search.touched) ||
-            formSearch.controls.search.errors?.maxlength
-        }"
-      />
-      <button type="submit" [disabled]="formSearch.status === 'INVALID'">
-        buscar
-        <fa-icon [icon]="iconsS.faSearch"></fa-icon>
-      </button>
-    </form>
+  <div  class="menu-toggle" >
+    <button (click)="menuToggle($event)"   class="menu-toggle__btn" >
+      <fa-icon [icon]="iconsS.faBars"></fa-icon>
+    </button>
   </div>
+  <div #sliderMenu class="contenedor--menu">
+    <!--opcionees del menu-->
+    <ul class="contenedorNav--navegacion">
+      <li routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
+        <a (click)="navegar('home')"> Home</a>
+        <!-- <a routerLink="home" (click)="navegar('home')" > Home</a> -->
+      </li>
+      <li routerLinkActive="Actived" class="contenedorNav--navegacion__enlace">
+        <a (click)="navegar('buscador')"> Buscar</a>
+        <!-- <a routerLink="buscador" (click)="navegar('buscador')" > Buscar</a> -->
+      </li>
+    </ul>
+
+    <div #busqueda *ngIf="!cargaComponent.disintegrates" class="contenedorNav--searchBar">
+      <form [formGroup]="formSearch" (ngSubmit)="search(formSearch)" class="contenedorNav--searchBar__form" novalidate>
+        <input class="searchBar--form__text" formControlName="search" type="text" placeholder="ingresa tu busqueda"
+          [ngClass]="{
+              inputError:
+                (formSearch.controls.search.errors?.required &&
+                  formSearch.controls.search.touched) ||
+                formSearch.controls.search.errors?.maxlength
+            }" />
+        <button type="submit" [disabled]="formSearch.status === 'INVALID'">
+          <fa-icon [icon]="iconsS.faSearch"></fa-icon>
+        </button>
+      </form>
+    </div>
+
+  </div>
+
 </nav>

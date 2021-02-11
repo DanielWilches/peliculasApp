@@ -18,9 +18,14 @@ justify-content: center;
   padding: 30px;
   background-color: rgba(100, 100, 100,.3);
   border-radius: 6px;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 auto;
+  max-width: 1300px;
+  @media screen and  (max-width: 767px) {
+    padding: 10px;
+
+  }
 }
 .buscador--formulario__input{
   width: 100%;

@@ -27,6 +27,9 @@
 @import './pages/home.scss';
 @import './pages/buscador.scss';
 @import './pages/pelicula.scss';
+@import './shared/loading.scss';
+@import './shared/error.scss';
+
 .header, .footer{
   background-color:$azulBase;
   font-family: $fontRobotoRegular;
