@@ -19,7 +19,7 @@ export class AppComponent {
 
   addClassHeader() {
     fromEvent(document, 'scroll').subscribe(value => {
-      if (document.documentElement.scrollTop>50) {
+      if (document.documentElement.scrollTop>1) {
         this.reder.addClass(this.header.nativeElement, 'headerActivated');
         this.reder.addClass(this.main.nativeElement, 'main100');
         // .main100

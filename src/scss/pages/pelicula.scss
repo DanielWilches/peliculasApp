@@ -1,6 +1,6 @@
-@import '../Util/variables.scss';
+@import "../Util/variables.scss";
 
-.conpeli{
+.conpeli {
   width: 100%;
   height: auto;
   display: flex;
@@ -8,21 +8,21 @@
   margin-bottom: 30px;
   padding: 20px;
 }
-.conpeli--info__poster{
+.conpeli--info__poster {
   width: 100%;
   height: auto;
   max-width: 400px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   margin: auto;
-  a{
+  a {
     display: block;
     width: 100%;
     height: auto;
     text-align: center;
     text-transform: capitalize;
     text-decoration: none;
-    color:white;
+    color: white;
     font-size: 20px;
     box-sizing: border-box;
     background-color: $azulBase;
@@ -33,20 +33,20 @@
   }
 }
 
-.info--poster__img{
+.info--poster__img {
   width: 100%;
   height: auto;
   max-height: 600px;
   overflow: hidden;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  img{
+  img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 }
-.conpeli--info__articulo{
+.conpeli--info__articulo {
   width: 90%;
   height: auto;
   max-width: 830px;
@@ -54,14 +54,13 @@
   padding: 20px;
   @media screen and (max-width: 1024px) {
     padding: 20px 0;
-
   }
 }
 
-.info--articulo__titulos{
+.info--articulo__titulos {
   width: 100%;
   height: auto;
-  h3{
+  h3 {
     display: block;
     width: 100%;
     height: auto;
@@ -72,7 +71,7 @@
     box-sizing: border-box;
     flex-flow: row wrap;
   }
-  time{
+  time {
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
@@ -81,7 +80,7 @@
   }
 }
 
-.conpeli--info__descricion{
+.conpeli--info__descricion {
   display: flex;
   flex-flow: row wrap;
   width: 95%;
@@ -93,7 +92,7 @@
   padding: 10px 10px 10px 0;
   justify-content: flex-start;
 }
-.info--descricion__generos{
+.info--descricion__generos {
   list-style: none;
   display: flex;
   flex-flow: row wrap;
@@ -102,17 +101,17 @@
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  li{
+  li {
     margin: auto;
   }
 }
 
-.info--descricion__status{
+.info--descricion__status {
   margin: 0;
   padding: 0;
 }
 
-.conpeli--info__cite{
+.conpeli--info__cite {
   font-size: 20px;
   margin: 10px auto;
   font-weight: 500;
@@ -120,16 +119,16 @@
   box-sizing: border-box;
 }
 
-.conpeli--info__titulo{
+.conpeli--info__titulo {
   display: none;
 }
-.conpeli--info__resumen{
+.conpeli--info__resumen {
   margin: 10px auto 10px 0;
   font-size: 20px;
-  color:$colorGrey;
+  color: $colorGrey;
   line-height: 30px;
 }
-.conpeli--info__costos{
+.conpeli--info__costos {
   display: flex;
   width: 100%;
   height: auto;
@@ -138,7 +137,7 @@
   justify-content: space-around;
   padding: 10px;
   margin: 10px auto;
-  p{
+  p {
     width: min-content;
     margin: 0%;
     padding: 10px;
@@ -146,101 +145,99 @@
     font-weight: 400;
   }
 }
-.conpeli--info__popular{
+.conpeli--info__popular {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
-  >p{
+  > p {
     font-size: 20px;
     color: black;
     font-weight: 500;
     margin: 0;
-    &::first-letter{
+    &::first-letter {
       text-transform: uppercase;
     }
   }
 }
-.info__popular__porcentajes{
+.info__popular__porcentajes {
   display: flex;
   flex-flow: row wrap;
   height: auto;
   width: 100%;
-  justify-content:  space-between;
+  justify-content: space-between;
   position: relative;
   @include porcertajeVotos;
-
 }
 
-.info--popular__PopularBarra{
+.info--popular__PopularBarra {
   width: 100%;
   height: 60px;
   padding: 10px 0;
   position: relative;
   margin-top: 10px;
 }
-.barra--votos, .fondo--votos{
-    width: 100%;
+.barra--votos,
+.fondo--votos {
+  width: 100%;
   height: 40px;
-  border-radius:6px;
+  border-radius: 6px;
   position: absolute;
 }
-.barra--votos{
+.barra--votos {
   background-color: $positivoBarra;
   z-index: 3;
-
 }
-.fondo--votos{
-z-index: 1;
+.fondo--votos {
+  z-index: 1;
   background-color: $fondoBarra;
 }
 
-.info--votos__no{
+.info--votos__no {
   @include noVoto;
 }
 
-.container--info__costos{
+.container--info__costos {
   width: 100%;
   height: auto;
   padding: 10px;
   margin: 0;
-  p{
+  p {
     padding: 0;
     font-size: 20px;
     font-weight: 300;
-    color:$colorGrey;
+    color: $colorGrey;
     text-transform: lowercase;
-    &::first-letter{
-      text-transform: uppercase
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
 }
 
-.container--moreinfo{
+.container--moreinfo {
   display: flex;
   flex-flow: column wrap;
   margin: 0 0 50px 0;
   padding: 35px;
   width: 100%;
   height: auto;
-  h3{
+  h3 {
     font-size: 30px;
     color: black;
     margin: 15px auto 10px;
     font-weight: 700;
   }
-  h4{
+  h4 {
     color: $colorGrey;
     font-size: 20px;
     font-weight: 500;
     padding-left: 25px;
   }
-
 }
 
-.container--moreinfo__production_companies{
+.container--moreinfo__production_companies {
   width: 100%;
   height: auto;
   display: flex;
@@ -249,15 +246,16 @@ z-index: 1;
   @include scrolls;
   margin-bottom: 40px;
 }
-.moreinfo--production_companies__card{
+.moreinfo--production_companies__card {
   margin: 25px;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    min-height: 200px;
-    padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  height: auto;
+  min-height: 200px;
+  padding: 10px;
 
-  p{
+  p {
     margin: 0;
     width: 100%;
     height: auto;
@@ -266,11 +264,11 @@ z-index: 1;
     text-align: center;
   }
 }
-.production--companies__cardIMG{
+.production--companies__cardIMG {
   width: 260px;
   height: auto;
   overflow: hidden;
-  img{
+  img {
     width: 100%;
     height: auto;
     object-fit: cover;

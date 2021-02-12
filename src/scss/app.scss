@@ -10,7 +10,7 @@
 }
 
 .header {
-  z-index: 3;
+  z-index: 4;
   animation-name: headerOff;
   animation-duration: 0.5s;
   .contenedorNav--logo,
@@ -23,7 +23,7 @@
 
 .headerActivated {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0px 24px 25px -5px rgba(0, 0, 0, 0.36);
   animation-name: headerAc;
   animation-duration: 0.5s;
@@ -32,24 +32,22 @@
   .contenedorNav--searchBar {
     padding: 15px 10px;
     animation-name: headerPadding;
-    animation-duration: 0.5s;
+    animation-duration: 0.5ms;
   }
 }
 .main100{
-  margin-top: 170px !important;
-  animation-name: mainTop;
-  animation-duration: 0.5s;
+  margin-top: 150px ;
+  animation-name: mainTop !important ;
+  animation-duration: 0.5s !important ;
+  transition: all
 }
 
 @import "./shared/navbar.scss";
 .main {
   max-width: 1400px;
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
-  height: auto;
   font-family: $fontFiraRegular;
   padding: 0px 40px;
   animation-duration: 0.5s;
