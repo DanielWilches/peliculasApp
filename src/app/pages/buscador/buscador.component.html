@@ -12,7 +12,7 @@
   </div>
   <ng-container *ngIf="!cargaComponente.loading; else elseTemplate">
     <!-- <ng-container *ngIf="false"> -->
-    <app-search-cards  [ngStyle]="{'margin-bottom.px': '35'}"  [arraybusqueda]="arrayBuquedas"></app-search-cards>
+    <app-search-cards  [ngStyle]="{'margin-bottom.px': '35', 'padding.px':'20'}"  [arraybusqueda]="arrayBuquedas"></app-search-cards>
   </ng-container>
   <app-error *ngIf="cargaComponente.error"></app-error>
   <ng-template #elseTemplate>

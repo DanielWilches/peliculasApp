@@ -40,7 +40,6 @@
         <div *ngIf="pelicula.vote_average > 0" class="info__popular__porcentajes">
           <p>0%</p>
           <p [ngStyle]="{'left.%': pelicula.vote_average * 10}"  >{{ pelicula.vote_average * 10}}%</p>
-          <p>100%</p>
         </div>
         <div class="info--popular__PopularBarra" *ngIf="pelicula.vote_average > 0">
           <div class="barra--votos" [ngStyle]="{ 'width.%': pelicula.vote_average * 10 }"></div>

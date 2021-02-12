@@ -1,12 +1,12 @@
-@import '../Util/variables.scss';
+@import "../Util/variables.scss";
 
 .conCard {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: auto;
-    margin-bottom: 40px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: auto;
+  margin-bottom: 40px;
   @include scrolls;
 }
 .conCard--card {
@@ -16,9 +16,11 @@
   border-radius: 6px;
   transition: 0.5s;
   box-shadow: 0px 0px 35px 9px rgba(0, 0, 0, 0.2);
+  //horizontal//vertical//blur radius//spreadradius// color
   transform: scale(0.9);
   min-width: 300px;
-  //horizontal//vertical//blur radius//spreadradius// color
+}
+.cardHover {
   &:hover {
     box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -68,7 +70,6 @@
   p {
     width: auto;
     height: auto;
-
   }
   @include porcertajeVotos;
 }
@@ -99,7 +100,7 @@
   }
 }
 .conCard--card__noVoto {
-@include noVoto;
+  @include noVoto;
 }
 
 .conCard--card__textinfo {

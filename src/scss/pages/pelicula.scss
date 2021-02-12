@@ -52,6 +52,10 @@
   max-width: 830px;
   margin: auto;
   padding: 20px;
+  @media screen and (max-width: 1024px) {
+    padding: 20px 0;
+
+  }
 }
 
 .info--articulo__titulos{

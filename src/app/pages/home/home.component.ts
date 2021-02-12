@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from '../../services/peliculas.service';
 import { Peliculas } from '../../Interface/peliculas.interface';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 
 
@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     error: false
   };
   urlAnterior: string;
+
   constructor(private PeliculasS: PeliculasService, private router: Router) {
     this.getCartelera();
     this.getPopulares();
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit {
 
     this.PeliculasS.getCartelera().subscribe((resul: any) => {
       this.Pcartelera = resul;
-        this.cargado.Cartelera = false;
+      this.cargado.Cartelera = false;
       return this.Pcartelera;
     }, err => {
       this.cargado.PopularesInfantiles = false;
@@ -45,7 +46,7 @@ export class HomeComponent implements OnInit {
 
     this.PeliculasS.getPopulares().subscribe((resul) => {
       this.Ppopulares = resul;
-        this.cargado.Populares = false;
+      this.cargado.Populares = false;
       return this.Ppopulares;
     }, err => {
       this.cargado.PopularesInfantiles = false;
@@ -56,7 +57,7 @@ export class HomeComponent implements OnInit {
 
     this.PeliculasS.getPopularesInfantiles().subscribe((resul) => {
       this.PpopuInfatiles = resul;
-        this.cargado.PopularesInfantiles = false;
+      this.cargado.PopularesInfantiles = false;
       return this.PpopuInfatiles;
     }, err => {
       this.cargado.PopularesInfantiles = false;

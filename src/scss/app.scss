@@ -1,15 +1,48 @@
-
-@import './Util/variables.scss';
-@import './Util/fonts.scss';
-.header, .main, .footer {
+@import "./Util/variables.scss";
+@import "./Util/fonts.scss";
+.header,
+.main,
+.footer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-
 }
-@import './shared/navbar.scss';
-.main{
+
+.header {
+  z-index: 3;
+  animation-name: headerOff;
+  animation-duration: 0.5s;
+  .contenedorNav--logo,
+  .contenedorNav--navegacion,
+  .contenedorNav--searchBar {
+    animation-name: headerRestart;
+    animation-duration: 0.5s;
+  }
+}
+
+.headerActivated {
+  position: fixed;
+  z-index: 3;
+  box-shadow: 0px 24px 25px -5px rgba(0, 0, 0, 0.36);
+  animation-name: headerAc;
+  animation-duration: 0.5s;
+  .contenedorNav--logo,
+  .contenedorNav--navegacion,
+  .contenedorNav--searchBar {
+    padding: 15px 10px;
+    animation-name: headerPadding;
+    animation-duration: 0.5s;
+  }
+}
+.main100{
+  margin-top: 170px !important;
+  animation-name: mainTop;
+  animation-duration: 0.5s;
+}
+
+@import "./shared/navbar.scss";
+.main {
   max-width: 1400px;
   width: 100%;
   display: flex;
@@ -18,28 +51,28 @@
   background-color: white;
   height: auto;
   font-family: $fontFiraRegular;
-  padding: 0px  40px;
+  padding: 0px 40px;
+  animation-duration: 0.5s;
+  animation-name: main;
   @media screen and(max-width: 1024px) {
     padding: 0;
-
   }
 }
-@import './pages/home.scss';
-@import './pages/buscador.scss';
-@import './pages/pelicula.scss';
-@import './shared/loading.scss';
-@import './shared/error.scss';
+@import "./pages/home.scss";
+@import "./pages/buscador.scss";
+@import "./pages/pelicula.scss";
+@import "./shared/loading.scss";
+@import "./shared/error.scss";
 
-.header, .footer{
-  background-color:$azulBase;
+.header,
+.footer {
+  background-color: $azulBase;
   font-family: $fontRobotoRegular;
 }
-.footer{
+.footer {
   margin-top: 25px;
-  position: fixed;
+  // position: fixed;
   z-index: 3;
   bottom: 0;
 }
-@import './shared/footer.scss'
-
-
+@import "./shared/footer.scss";

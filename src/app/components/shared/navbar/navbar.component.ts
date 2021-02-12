@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable} from 'rxjs';
 import { IconsService } from '../../../services/icons.service';
+import { DataUIService } from './../../../services/data-ui.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,12 +18,12 @@ export class NavbarComponent implements OnInit {
   };
   count: number = 0;
 
+
   @ViewChild('sliderMenu', { static: false }) sliderMenu: ElementRef;
   @ViewChild('busqueda', { static: false }) busqueda: ElementRef;
 
-  constructor(public iconsS: IconsService, private router: Router, private reder: Renderer2) {
+  constructor(public iconsS: IconsService, public DataUI:DataUIService, private router: Router, private reder: Renderer2) {
     this.validacion();
-
   }
 
   ngOnInit(): void {
@@ -33,14 +34,14 @@ export class NavbarComponent implements OnInit {
 
   navegar(text: string) {
     console.log(text);
-    if (text === 'buscador' && !this.cargaComponent.disintegrates) {
-      this.reder.setStyle(this.busqueda.nativeElement, 'display', 'none');
-    } else {
-    this.reder.setStyle(this.busqueda.nativeElement, 'display', 'flex');
-    }
-    if (window.screen.width < 1024) {
-    this.reder.setStyle(this.sliderMenu.nativeElement, 'display', 'none');
-    }
+    // if (text === 'buscador' && !this.cargaComponent.disintegrates) {
+    //   this.reder.setStyle(this.busqueda.nativeElement, 'display', 'none');
+    // } else {
+    // this.reder.setStyle(this.busqueda.nativeElement, 'display', 'flex');
+    // }
+    // if (window.screen.width < 1024) {
+    // this.reder.setStyle(this.sliderMenu.nativeElement, 'display', 'none');
+    // }
     this.count = 0;
     this.router.navigate([`${text}/`]);
     this.cargaComponent.disintegrates = false;
@@ -66,7 +67,8 @@ export class NavbarComponent implements OnInit {
 
   // captura del ancho de la pantalla del cliente
   @HostListener('window:resize', ['$event']) onResize(event) {
-    console.log(event)
+    console.log('navbar',event.target.innerWidth)
+
     if (event.target.innerWidth < 1024) {
       this.reder.setStyle(this.sliderMenu.nativeElement, 'display', 'none');
     } else {
@@ -90,8 +92,6 @@ export class NavbarComponent implements OnInit {
     }
     console.log(this.count)
   }
-
-
   formateo() {
     if (window.screen.width <= 1024) {
       this.reder.setStyle(this.sliderMenu.nativeElement, 'display', 'none');

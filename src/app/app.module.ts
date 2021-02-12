@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
 // iconos
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //  routing
@@ -19,18 +18,20 @@ import { PeliculaComponent } from './pages/pelicula/pelicula.component';
 
 // componentes
 import { CardComponent } from './components/card/card.component';
+import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 // components shared
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ErrorComponent } from './components/shared/error/error.component';
-import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 // pipes
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { NoLogoPipe } from './pipes/no-logo.pipe';
 import { TitleSizePipe } from './pipes/title-size.pipe';
 import { TimePipe } from './pipes/time.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 @NgModule({
@@ -43,12 +44,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoadingComponent,
     ErrorComponent,
     PeliculaComponent,
-    NoImagePipe,
-    CardComponent,
-    NoLogoPipe,
     SearchCardsComponent,
+    CardComponent,
+    NoImagePipe,
+    NoLogoPipe,
     TitleSizePipe,
-    TimePipe,
+    TimePipe
   ],
   imports: [
     AppRoutingModule,
